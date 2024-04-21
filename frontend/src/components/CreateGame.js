@@ -14,32 +14,34 @@ const CreateGame = (props) => {
   };
 
   return (
-    <div className="row">
-      <div className="col-sm"></div>
-      <div className="col-sm-8">
-        <h1 className="text-center">Create Game</h1>
-        <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <label htmlFor="nickName">Enter Nick Name</label>
-            <input
-              type="text"
-              name="nickName"
-              value={nickName}
-              onChange={onChange}
-              placeholder="Enter Nick Name"
-              className="form-control"
-            />
+    <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-100">
+        <div class="card w-50 p-0">
+          <div class="card-header">
+            Crear Sala
           </div>
-          <button
-            style={{ cursor: "pointer" }}
-            type="submit"
-            className="btn btn-primary"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-      <div className="col-sm"></div>
+          <div class="card-body">
+            <h5 class="card-title">Nombre de usuario:</h5>
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="nickName"
+                  value={nickName}
+                  onChange={onChange}
+                  placeholder="Nick"
+                  className="form-control"
+                />
+              </div>
+              <button
+                style={{ cursor: "pointer" }}
+                type="submit"
+                className="btn btn-primary btn-lg mt-3"
+              >
+                Jugar
+              </button>
+            </form>
+          </div>
+        </div>
     </div>
   );
 };

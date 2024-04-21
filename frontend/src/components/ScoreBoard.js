@@ -15,7 +15,7 @@ const ScoreBoard = ({ players }) => {
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">User</th>
+          <th scope="col">Jugador</th>
           <th scope="col">WPM</th>
         </tr>
       </thead>

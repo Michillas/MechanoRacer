@@ -15,29 +15,29 @@ const JoinGame = props =>{
     }
 
     return(
-        <div className="row">
-            <div className="col-sm"></div>
-            <div className="col-sm-8">
-                <h1 className="text-center">Join Game</h1>
-                <form onSubmit={onSubmit}>
+        <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-100">
+            <div class="card w-50 p-0">
+                <div class="card-header">
+                    Unirse a una Sala
+                </div>
+                <form onSubmit={onSubmit} className="p-3">
                     <div className="form-group">
-                        <label htmlFor="gameID">Enter Game ID</label>
+                        <h5 class="card-title">Código de la Sala</h5>
                         <input type="text" name="gameID" 
-                                           value={userInput.gameID}
-                                           onChange={onChange}
-                                           placeholder="Enter Game ID"
-                                           className="form-control"/>
-                        <label htmlFor="nickName">Enter Nick Name</label>
+                                        value={userInput.gameID}
+                                        onChange={onChange}
+                                        placeholder="Código"
+                                        className="form-control"/>
+                        <h5 class="card-title m-2">Nombre de usuario</h5>
                         <input type="text" name="nickName" 
-                                           value={userInput.nickName}
-                                           onChange={onChange}
-                                           placeholder="Enter Nick Name"
-                                           className="form-control"/>
+                                        value={userInput.nickName}
+                                        onChange={onChange}
+                                        placeholder="Nick"
+                                        className="form-control"/>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary mt-3">Entrar</button>
                 </form>
             </div>
-            <div className="col-sm"></div>
         </div>
     )
 }

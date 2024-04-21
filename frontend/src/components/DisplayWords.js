@@ -1,7 +1,7 @@
 import React from "react";
 
 const typedCorrentlyStyle = {
-  backgroundColor: "#34eb77",
+  backgroundColor: "#00c448",
 };
 
 const getTypedWords = (words, player) => {
@@ -26,11 +26,11 @@ const getWordsToBeTyped = (words, player) => {
 
 const DisplayWords = ({ words, player }) => {
   return (
-    <>
+    <div className="col">
       {getTypedWords(words, player)}
       {getCurrentWord(words, player)}
       {getWordsToBeTyped(words, player)}
-    </>
+    </div>
   );
 };
 

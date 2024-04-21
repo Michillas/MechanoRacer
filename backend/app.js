@@ -61,7 +61,7 @@ io.on("connect", (socket) => {
     if (player.isPartyLeader) {
       let timerID = setInterval(async () => {
         if (countDown >= 0) {
-          io.to(gameID).emit("timer", { countDown, msg: "Starting Game" });
+          io.to(gameID).emit("timer", { countDown, msg: "Empezando Partida" });
           countDown--;
         } else {
           game.isOpen = false;
@@ -126,7 +126,7 @@ const startGameClock = async (gameID) => {
         const formatTime = calculateTime(time);
         io.to(gameID).emit("timer", {
           countDown: formatTime,
-          msg: "Time Remaining",
+          msg: "Tiempo Restante",
         });
         time--;
       } else {
