@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 const GameMenu = (props) => {
   let navigate = useNavigate();
   return (
-    <div className="montserrat-font d-flex justify-content-center align-items-center text-center vh-100">
+    <div className="montserrat-font d-flex justify-content-center align-items-center text-center vh-100 bg-warning">
       <div className="d-flex justify-content-center align-items-center text-center row gy-3">
-        <h1 className="main-font display-1 m-0" >MechanoRacer</h1>
+        <h1 className="main-font display-1 m-0 text-dark" >MechanoRacer</h1>
         <button
           type="button"
           onClick={() => navigate("/game/create")}
-          className="btn btn-primary btn-lg"
+          className="btn btn-dark btn-lg shadow"
           style={{ cursor: "pointer" }}
         >
           Crear partida
@@ -19,7 +19,7 @@ const GameMenu = (props) => {
         <button
           type="button"
           onClick={() => navigate("/game/join")}
-          className="btn btn-primary btn-lg"
+          className="btn btn-dark btn-lg shadow"
         >
           Unirse con código
         </button>

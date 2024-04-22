@@ -13,7 +13,7 @@ const StartButton = ({player,gameID})=>{
     return(
         isPartyLeader && showBtn ? (
             <>
-                <button type="button" onClick={onClickHandler} className="btn btn-primary" style={{cursor:'pointer'}}>Empezar Partida</button>
+                <button type="button" onClick={onClickHandler} className="btn btn-warning" style={{cursor:'pointer'}}>Empezar Partida</button>
                 <hr/>   
             </>                              
         ) : null

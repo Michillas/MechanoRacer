@@ -14,8 +14,8 @@ const CreateGame = (props) => {
   };
 
   return (
-    <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-100">
-        <div class="card w-50 p-0">
+    <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-100 mw-100 container bg-warning">
+        <div class="card w-50 p-0 shadow">
           <div class="card-header">
             Crear Sala
           </div>

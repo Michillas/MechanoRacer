@@ -18,8 +18,8 @@ const TypeRacer = ({ gameState }) => {
   const player = findPlayer(players);
   if (_id === "") return <Navigate to="/" />;
   return (
-    <div className="d-flex row montserrat-font justify-content-center align-items-center text-center vh-100">
-      <div>
+    <div className="d-flex row montserrat-font justify-content-center align-items-center text-center vh-100 mw-100 container bg-secondary-subtle">
+      <div className="px-5">
         <div class="card">
           <div class="card-body">
             <DisplayWords words={words} player={player} />
