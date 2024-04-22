@@ -1,8 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 function Header() {
     return (
         <div className="d-flex">
-            <h2 className="me-auto main-font h2 m-2">MechanoRacer</h2>
-            <i class="bi bi-github"></i>
+            <a className="me-auto main-font h2 m-2 text-decoration-none" href="/">MechanoRacer</a>
+            <a className="bi bi-github h2 m-2" href="https://github.com/Michillas/MechanoRacer"></a>
         </div>
     );
 }

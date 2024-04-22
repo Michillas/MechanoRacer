@@ -19,9 +19,9 @@ const TypeRacer = ({ gameState }) => {
   if (_id === "") return <Navigate to="/" />;
   return (
     <div className="px-5 bg-warning">
-      <div className="shadow-lg card border-0 bg-warning">
-        <div className="shadow-lg card-body p-0">
-          <div className="rounded-3 shadow-lg m-0 vh-100 d-flex row montserrat-font justify-content-center align-items-center text-center mw-100 container bg-secondary-subtle">
+      <div className="card border-0 bg-warning">
+        <div className="card-body p-0">
+          <div className="m-0 vh-88 d-flex row montserrat-font justify-content-center align-items-center text-center mw-100 container bg-secondary-subtle">
             <div className="px-5">
               <div className="card">
                 <div className="card-body">

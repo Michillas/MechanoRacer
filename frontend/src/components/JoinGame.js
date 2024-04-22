@@ -15,7 +15,7 @@ const JoinGame = props =>{
     }
 
     return(
-        <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-100 mw-100 container bg-warning">
+        <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-88 mw-100 ms-0 bg-warning">
             <div class="card w-50 p-0 shadow">
                 <div class="card-header">
                     Unirse a una Sala

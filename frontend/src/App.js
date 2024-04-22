@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 import socket from "./socketConfig";
@@ -12,6 +13,7 @@ import CreateGame from "./components/CreateGame";
 import JoinGame from "./components/JoinGame";
 import TypeRacer from "./components/TypeRacer";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   const [gameState, setGameState] = React.useState({
@@ -40,7 +42,8 @@ function App() {
   }, [gameState._id, gameState.gameCode, navigate]);
 
   return (
-    <>
+    <div className="vh-100">
+      <Header/>
       <Routes>
         <Route path="/" Component={GameMenu} />
         <Route path="/game/create" Component={CreateGame} />
@@ -50,7 +53,8 @@ function App() {
           element={<TypeRacer gameState={gameState} />}
         />
       </Routes>
-    </>
+      <Footer/>
+    </div>
   );
 }
 
