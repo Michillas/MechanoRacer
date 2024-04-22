@@ -35,7 +35,7 @@ const CreateGame = (props) => {
               <button
                 style={{ cursor: "pointer" }}
                 type="submit"
-                className="btn btn-primary btn-lg mt-3"
+                className="btn btn-warning btn-lg mt-3"
               >
                 Jugar
               </button>

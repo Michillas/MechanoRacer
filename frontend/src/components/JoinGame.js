@@ -35,7 +35,7 @@ const JoinGame = props =>{
                                         placeholder="Nick"
                                         className="form-control"/>
                     </div>
-                    <button type="submit" className="btn btn-primary mt-3">Entrar</button>
+                    <button type="submit" className="btn btn-warning mt-3">Entrar</button>
                 </form>
             </div>
         </div>
