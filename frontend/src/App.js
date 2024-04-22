@@ -8,10 +8,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import socket from "./socketConfig";
 
-import GameMenu from "./components/GameMenu";
-import CreateGame from "./components/CreateGame";
-import JoinGame from "./components/JoinGame";
-import TypeRacer from "./components/TypeRacer";
+import GameMenu from "./pages/GameMenu";
+import CreateGame from "./pages/CreateGame";
+import JoinGame from "./pages/JoinGame";
+import TypeRacer from "./pages/TypeRacer";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 

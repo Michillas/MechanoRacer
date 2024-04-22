@@ -1,13 +1,13 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import CountDown from "./CountDown";
-import StartButton from "./StartButton";
+import CountDown from "../components/CountDown";
+import StartButton from "../components/StartButton";
 import socket from "../socketConfig";
-import DisplayWords from "./DisplayWords";
-import Form from "./Form";
-import ProgressBar from "./ProgressBar";
-import ScoreBoard from "./ScoreBoard";
-import DisplayGameCode from "./DisplayGameCode";
+import DisplayWords from "../components/DisplayWords";
+import Form from "../components/Form";
+import ProgressBar from "../components/ProgressBar";
+import ScoreBoard from "../components/ScoreBoard";
+import DisplayGameCode from "../components/DisplayGameCode";
 
 const findPlayer = (players) => {
   return players.find((player) => player.socketID === socket.id);
