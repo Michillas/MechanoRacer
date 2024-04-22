@@ -11,6 +11,7 @@ import GameMenu from "./components/GameMenu";
 import CreateGame from "./components/CreateGame";
 import JoinGame from "./components/JoinGame";
 import TypeRacer from "./components/TypeRacer";
+import Footer from "./components/Footer";
 
 function App() {
   const [gameState, setGameState] = React.useState({
@@ -39,15 +40,17 @@ function App() {
   }, [gameState._id, gameState.gameCode, navigate]);
 
   return (
-    <Routes>
-      <Route path="/" Component={GameMenu} />
-      <Route path="/game/create" Component={CreateGame} />
-      <Route path="/game/join" Component={JoinGame} />
-      <Route
-        path="/game/:gameID"
-        element={<TypeRacer gameState={gameState} />}
-      />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" Component={GameMenu} />
+        <Route path="/game/create" Component={CreateGame} />
+        <Route path="/game/join" Component={JoinGame} />
+        <Route
+          path="/game/:gameID"
+          element={<TypeRacer gameState={gameState} />}
+        />
+      </Routes>
+    </>
   );
 }
 
