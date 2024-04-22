@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Montserrat:wght@600&display=swap');
 
 .montserrat-font {
     font-family: "Montserrat", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -7,8 +7,11 @@
     font-style: normal;
 }
 
-.jersey-font {
-    font-family: "Jersey 10", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+.main-font {
+    font-family: "Climate Crisis", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-variation-settings:
+      "YEAR" 1979;
 }

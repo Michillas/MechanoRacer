@@ -6,7 +6,7 @@ const GameMenu = (props) => {
   return (
     <div className="montserrat-font d-flex justify-content-center align-items-center text-center vh-100">
       <div className="d-flex justify-content-center align-items-center text-center row gy-3">
-        <h1 className="jersey-font display-1 m-0" >MecanoRacer</h1>
+        <h1 className="main-font display-1 m-0" >MechanoRacer</h1>
         <button
           type="button"
           onClick={() => navigate("/game/create")}
