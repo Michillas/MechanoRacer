@@ -46,6 +46,8 @@ const TypeRacer = ({ gameState }) => {
                 </div>
               </div>
               <hr/>
+              <CountDown />
+              <hr/>
               <h2 className="mb-3">Jugadores</h2>
               <div className="card">
                 <div className="card-body">
@@ -59,7 +61,6 @@ const TypeRacer = ({ gameState }) => {
               </div>
               <hr/>
               <div>
-                <CountDown />
                 <StartButton player={player} gameID={_id} />
                 {isOpen ? <DisplayGameCode gameCode={gameCode} /> : null}
                 <ScoreBoard players={players} />
