@@ -1,14 +1,16 @@
 const express = require("express");
 const app = express();
+const http = require("http");
 const socketio = require("socket.io");
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 const { nanoid } = require("nanoid");
 
-const expressServer = app.listen(3001);
+const expressServer = http.createServer(app);
 const io = socketio(expressServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://mechanoracer.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
@@ -17,7 +19,7 @@ const Game = require("./models/game");
 const quotesAPI = require("./api/quotesAPI");
 
 mongoose
-  .connect("mongodb://localhost:27017/mecanoracer")
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("SUCCESS >> Connected to database");
   })
