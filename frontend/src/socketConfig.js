@@ -1,3 +1,3 @@
 import io from 'socket.io-client';
-const socket = io('http://mechanoracer.onrender.com');
+const socket = io('https://mechanoracer.onrender.com');
 export default socket;
