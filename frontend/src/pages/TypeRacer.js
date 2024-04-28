@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import CountDown from "../components/CountDown";
 import StartButton from "../components/StartButton";
 import socket from "../socketConfig";
@@ -16,7 +16,23 @@ const findPlayer = (players) => {
 const TypeRacer = ({ gameState }) => {
   const { _id, gameCode, players, words, isOpen, isOver } = gameState;
   const player = findPlayer(players);
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const handleEndGame = () => {
+      navigate(`/game/${gameCode}/results`);
+    };
+
+    socket.on("endgame", handleEndGame);
+
+    return () => {
+      socket.off("endgame", handleEndGame);
+    };
+  }, [gameCode, navigate]);
+
   if (_id === "") return <Navigate to="/" />;
+  
   return (
     <div className="px-5 bg-warning">
       <div className="card border-0 bg-warning">

@@ -12,6 +12,7 @@ import GameMenu from "./pages/GameMenu";
 import CreateGame from "./pages/CreateGame";
 import JoinGame from "./pages/JoinGame";
 import TypeRacer from "./pages/TypeRacer";
+import EndGame from "./pages/EndGame";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -36,10 +37,10 @@ function App() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (gameState._id !== "") {
+    if (gameState._id !== "" && !gameState.isOver) {
       navigate(`/game/${gameState.gameCode}`);
     }
-  }, [gameState._id, gameState.gameCode, navigate]);
+  }, [gameState._id, gameState.gameCode, navigate, gameState.isOver]);
 
   return (
     <div className="vh-100">
@@ -51,6 +52,10 @@ function App() {
         <Route
           path="/game/:gameID"
           element={<TypeRacer gameState={gameState} />}
+        />
+        <Route
+          path="/game/:gameID/results"
+          element={<EndGame gameState={gameState} />}
         />
       </Routes>
       <Footer/>
