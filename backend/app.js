@@ -12,6 +12,7 @@ const io = socketio(expressServer, {
   cors: {
     origin: "https://mechanoracer.vercel.app/",
     methods: ["GET", "POST"],
+    credentials: true
   },
 });
 
