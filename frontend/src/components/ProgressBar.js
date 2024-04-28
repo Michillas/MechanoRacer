@@ -16,7 +16,7 @@ const ProgressBar = ({ player, players, wordsLength }) => {
           <h5 className="text-start">{player.nickName}</h5>
           <div className="progress my-1" key={player._id}>
             <div
-              className="progress-bar progress-bar-striped bg-warning"
+              className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
               role="progressbar"
               style={{ width: percentage }}
             >

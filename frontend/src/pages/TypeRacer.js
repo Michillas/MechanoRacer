@@ -34,7 +34,7 @@ const TypeRacer = ({ gameState }) => {
   if (_id === "") return <Navigate to="/" />;
   
   return (
-    <div className="px-5 bg-warning">
+    <div className="px-5 bg-warning progress-bar-striped">
       <div className="card border-0 bg-warning">
         <div className="card-body p-0">
           <div className="m-0 vh-88 d-flex row montserrat-font justify-content-center align-items-center text-center mw-100 container bg-secondary-subtle">

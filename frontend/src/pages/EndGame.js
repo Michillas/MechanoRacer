@@ -13,7 +13,7 @@ const EndGame = ({ gameState }) => {
     }
 
     return (
-        <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-88 mw-100 ms-0 bg-warning px-5">
+        <div className="row montserrat-font d-flex justify-content-center align-items-center text-center vh-88 mw-100 ms-0 bg-warning progress-bar-striped px-5">
         <div className="card border-0">
             <div className="card-body p-3">
                 {isOver ? 
