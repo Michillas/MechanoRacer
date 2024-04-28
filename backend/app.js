@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
-const http = require("http");
 const socketio = require("socket.io");
 const mongoose = require("mongoose");
 require('dotenv').config();
 
 const { nanoid } = require("nanoid");
 
-const expressServer = http.createServer(app);
+const port = process.env.PORT || 3001;
+
+const expressServer = app.listen(port);
 const io = socketio(expressServer, {
   cors: {
     origin: "https://mechanoracer.vercel.app",
