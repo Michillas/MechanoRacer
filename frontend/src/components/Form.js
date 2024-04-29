@@ -15,6 +15,14 @@ const Form = ({isOpen,isOver,gameID})=>{
         setUserInput("");
     }
 
+    const onSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission
+        if (userInput.trim() !== "") {
+          socket.emit("userInput", { userInput, gameID });
+          resetForm();
+        }
+    };
+
     const onChange = e =>{
         let value = e.target.value;
         let lastChar = value.charAt(value.length - 1);
@@ -30,7 +38,7 @@ const Form = ({isOpen,isOver,gameID})=>{
         <div className="row my-3">
             <div className="col-sm"></div>
             <div className="col-sm-4">
-                <form>
+                <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <input type="text" readOnly={isOpen || isOver}
                                            onChange={onChange}
