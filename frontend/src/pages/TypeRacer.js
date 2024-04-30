@@ -39,7 +39,7 @@ const TypeRacer = ({ gameState }) => {
         <div className="card-body p-0">
           <div className="m-0 vh-88 d-flex row montserrat-font justify-content-center align-items-center text-center mw-100 container bg-secondary-subtle">
             <div className="px-5">
-              <div className="card">
+              <div className="card mt-2">
                 <div className="card-body">
                   <DisplayWords words={words} player={player} />
                   <Form isOpen={isOpen} isOver={isOver} gameID={_id} />
