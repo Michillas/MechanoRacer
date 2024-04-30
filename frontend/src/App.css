@@ -17,5 +17,5 @@
 }
 
 .vh-88 {
-    height: 88.9vh;
+    min-height: 88.9vh;
 }

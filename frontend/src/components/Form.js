@@ -16,7 +16,7 @@ const Form = ({isOpen,isOver,gameID})=>{
     }
 
     const onSubmit = (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault();
         if (userInput.trim() !== "") {
           socket.emit("userInput", { userInput, gameID });
           resetForm();
