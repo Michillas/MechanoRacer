@@ -51,6 +51,14 @@ const SinglePlayer = () => {
     }
   }, [timer.countDown, game.isOver, game.isOpen, navigate]);
 
+  React.useEffect(() => {
+    if (calculatePercentage() === 100) {
+      setGame((prev) => ({ ...prev, isOver: true }));
+      setTimer((prev) => ({ ...prev, msg: "Game Over!" }));
+      navigate(`/game/singleplayer/end`);
+    }
+  }, [player.currentWordIndex, game.words.length, navigate]);
+
   const startGame = () => {
     setGame((prev) => ({ ...prev, isOpen: false }));
   };
@@ -80,8 +88,8 @@ const SinglePlayer = () => {
   };
 
   const calculatePercentage = () => {
-    const percentage = ((player.currentWordIndex / game.words.length) * 100).toFixed(2);
-    return game.words.length > 0 ? `${percentage}%` : "0%";
+    const percentage = (player.currentWordIndex / game.words.length) * 100;
+    return game.words.length > 0 ? percentage : 0;
   };
 
   const typedWords = game.words.slice(0, player.currentWordIndex).join(" ");
@@ -125,9 +133,9 @@ const SinglePlayer = () => {
             <div className="progress w-75">
               <div
                 className="progress-bar bg-warning progress-bar-striped progress-bar-animated"
-                style={{ width: calculatePercentage() }}
+                style={{ width: `${calculatePercentage()}%` }}
               >
-                {calculatePercentage()}
+                {`${calculatePercentage().toFixed(2)}%`}
               </div>
             </div>
             <h5 className="mt-3">Jugador: {player.nickName}</h5>

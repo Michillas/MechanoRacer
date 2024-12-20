@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const EndGame = ({ gameState }) => {
+const EndSingle = () => {
 
     const navigate = useNavigate();
 
@@ -25,4 +25,4 @@ const EndGame = ({ gameState }) => {
     );
 };
 
-export default EndGame;
+export default EndSingle;
