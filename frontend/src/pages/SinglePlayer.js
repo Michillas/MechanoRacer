@@ -32,9 +32,10 @@ const SinglePlayer = () => {
 
   React.useEffect(() => {
     const endGame = () => {
+      const WPM = calculateWPM();
       setGame((prev) => ({ ...prev, isOver: true }));
       setTimer((prev) => ({ ...prev, msg: "Game Over!" }));
-      navigate(`/game/singleplayer/end`);
+      navigate(`/game/singleplayer/end`, { state: { WPM } });
     };
 
     if (timer.countDown > 0 && !game.isOver && !game.isOpen) {
@@ -53,11 +54,23 @@ const SinglePlayer = () => {
 
   React.useEffect(() => {
     if (calculatePercentage() === 100) {
+      const WPM = calculateWPM();
       setGame((prev) => ({ ...prev, isOver: true }));
       setTimer((prev) => ({ ...prev, msg: "Game Over!" }));
-      navigate(`/game/singleplayer/end`);
+      navigate(`/game/singleplayer/end`, { state: { WPM } });
     }
   }, [player.currentWordIndex, game.words.length, navigate]);
+
+  const calculateWPM = () => {
+    const numOfWords = player.currentWordIndex;
+    const timeInMinutes = (60 - timer.countDown) / 60;
+    return Math.floor(numOfWords / timeInMinutes);
+  };
+
+  const calculatePercentage = () => {
+    const percentage = (player.currentWordIndex / game.words.length) * 100;
+    return game.words.length > 0 ? percentage : 0;
+  };
 
   const startGame = () => {
     setGame((prev) => ({ ...prev, isOpen: false }));
@@ -85,11 +98,6 @@ const SinglePlayer = () => {
     } else {
       setUserInput(value);
     }
-  };
-
-  const calculatePercentage = () => {
-    const percentage = (player.currentWordIndex / game.words.length) * 100;
-    return game.words.length > 0 ? percentage : 0;
   };
 
   const typedWords = game.words.slice(0, player.currentWordIndex).join(" ");
