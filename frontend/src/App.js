@@ -16,6 +16,7 @@ import JoinGame from "./pages/JoinGame";
 import TypeRacer from "./pages/TypeRacer";
 import CreateSingle from "./pages/CreateSingle";
 import SinglePlayer from "./pages/SinglePlayer";
+import EndSingle from "./pages/EndSingle";
 import EndGame from "./pages/EndGame";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -55,6 +56,7 @@ function App() {
           <Route path="/game/create" Component={CreateGame} />
           <Route path="/game/singleplayer" Component={CreateSingle} />
           <Route path="/game/singleplayer/play" Component={SinglePlayer} />
+          <Route path="/game/singleplayer/end" Component={EndSingle} />
           <Route path="/game/join" Component={JoinGame} />
           <Route
             path="/game/:gameID"
