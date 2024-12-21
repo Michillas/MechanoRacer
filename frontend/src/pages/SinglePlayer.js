@@ -109,7 +109,7 @@ const SinglePlayer = () => {
       <div className="card border-0 bg-warning">
         <div className="card-body p-0">
           <div className="m-0 vh-88 d-flex flex-column justify-content-center align-items-center text-center bg-secondary-subtle">
-            <h2 className="mb-3">MechanoRacer</h2>
+            <h2 className="mb-2 main-font fst-italic">MechanoRacer</h2>
             <div className="card mt-2 w-75">
               <div className="card-body">
                 <div className="text-start">
