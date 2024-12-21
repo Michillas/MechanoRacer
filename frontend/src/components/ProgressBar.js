@@ -15,7 +15,7 @@ const ProgressBar = ({ player, players, wordsLength }) => {
         <>
           <h5 className="text-start">
             <span className="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-pill justify-content-center" style={{ width: 'max-content' }}>
-              <img className="rounded-circle me-2" width="24" height="24" src={`https://github.com/${player.nickName}.png`} alt=""/>{player.nickName}
+              <img className="rounded-circle me-1" width="24" height="24" src={`https://github.com/${player.nickName}.png`} alt=""/>{player.nickName}
             </span>
           </h5>
           <div className="progress my-1" key={player._id}>

@@ -146,7 +146,12 @@ const SinglePlayer = () => {
                 {`${calculatePercentage().toFixed(2)}%`}
               </div>
             </div>
-            <h5 className="mt-3">Jugador: {player.nickName}</h5>
+            <h5 className="mt-3 d-flex align-items-center justify-content-center">
+              <p className="me-2 mb-1">Jugador:</p>
+              <span className="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-pill justify-content-center" style={{ width: 'max-content' }}>
+                <img className="rounded-circle me-1" width="24" height="24" src={`https://github.com/${player.nickName}.png`} alt=""/>{player.nickName}
+              </span>
+            </h5>
           </div>
         </div>
       </div>
