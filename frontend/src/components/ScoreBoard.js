@@ -24,9 +24,9 @@ const ScoreBoard = ({ players }) => {
             return (
             <tr key={player.nickName}>
               <th scope="row">{index + 1}</th>
-              <td>
-              <span className="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-pill">
-                <img className="rounded-circle me-1" width="24" height="24" src={`https://github.com/${player.nickName}.png`} alt=""/>{player.nickName}
+              <td class="d-flex justify-content-center">
+              <span className="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-pill justify-content-center" style={{ width: 'max-content' }}>
+              <img className="rounded-circle me-2" width="24" height="24" src={`https://github.com/${player.nickName}.png`} alt=""/>{player.nickName}
               </span>
               </td>
               <td>{player.WPM}</td>
