@@ -21,13 +21,17 @@ const ScoreBoard = ({ players }) => {
       </thead>
       <tbody>
         {scoreBoard.map((player, index) => {
-          return (
+            return (
             <tr key={player.nickName}>
               <th scope="row">{index + 1}</th>
-              <td>{player.nickName}</td>
+              <td>
+              <span className="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-pill">
+                <img className="rounded-circle me-1" width="24" height="24" src={`https://github.com/${player.nickName}.png`} alt=""/>{player.nickName}
+              </span>
+              </td>
               <td>{player.WPM}</td>
             </tr>
-          );
+            );
         })}
       </tbody>
     </table>
